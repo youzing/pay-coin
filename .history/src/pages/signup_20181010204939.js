@@ -18,7 +18,7 @@ class HorizontalLoginForm extends React.Component {
     return (
       <Form onSubmit={this.handleSubmit} className="login-form" >
       <div className="signinto">
-      Sign Up
+      Sign In 
       </div>
         <FormItem>
           {getFieldDecorator('userName', {

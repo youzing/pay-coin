@@ -1,6 +1,5 @@
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import React, { Component } from "react";
-import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 const FormItem = Form.Item;
 
 class HorizontalLoginForm extends React.Component {
@@ -16,10 +15,9 @@ class HorizontalLoginForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form" >
-      <div className="signinto">
-      Sign Up
+      <div>
       </div>
+      <Form onSubmit={this.handleSubmit} className="login-form" >
         <FormItem>
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }],
@@ -36,12 +34,13 @@ class HorizontalLoginForm extends React.Component {
         </FormItem>
         <FormItem>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Regsiter
+            Log in
           </Button>
+          Or <a href="">register now!</a>
         </FormItem>
       </Form>
     );
   }
 }
-const Signup = Form.create()(HorizontalLoginForm);
-export default Signup;
+const Signin = Form.create()(HorizontalLoginForm);
+export default Signin;

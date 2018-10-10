@@ -1,9 +1,8 @@
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import React, { Component } from "react";
-import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 const FormItem = Form.Item;
 
-class HorizontalLoginForm extends React.Component {
+class Signin extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -14,12 +13,9 @@ class HorizontalLoginForm extends React.Component {
   }
 
   render() {
-    const { getFieldDecorator } = this.props.form;
+    const { getFieldDecorator } = Form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form" >
-      <div className="signinto">
-      Sign Up
-      </div>
+      <Form onSubmit={this.handleSubmit} className="login-form">
         <FormItem>
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }],
@@ -35,13 +31,21 @@ class HorizontalLoginForm extends React.Component {
           )}
         </FormItem>
         <FormItem>
+          {getFieldDecorator('remember', {
+            valuePropName: 'checked',
+            initialValue: true,
+          })(
+            <Checkbox>Remember me</Checkbox>
+          )}
+          <a className="login-form-forgot" href="">Forgot password</a>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Regsiter
+            Log in
           </Button>
+          Or <a href="">register now!</a>
         </FormItem>
       </Form>
     );
   }
 }
-const Signup = Form.create()(HorizontalLoginForm);
-export default Signup;
+
+export default Signin;

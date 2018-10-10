@@ -35,7 +35,7 @@ class App extends Component {
             </div>
           </Router>
 
-          <Footer className="foot">XinCheng © 2018</Footer>
+          <Footer>XinCheng © 2018</Footer>
         </Layout>
       </div>
     );
