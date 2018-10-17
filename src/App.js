@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
+          {/* 最简单的router实例   公用的底层接口  一般不适用  使用高级路由   router 下  只能有一个子元素   要有一个div爸爸保护下  */} 
           <Router>
             <div className="all">
               <div className="nav">
@@ -35,7 +36,7 @@ class App extends Component {
             </div>
           </Router>
 
-          <Footer className="foot">XinCheng © 2018</Footer>
+          <Footer className="foot">zyb © 2018</Footer>
         </Layout>
       </div>
     );
