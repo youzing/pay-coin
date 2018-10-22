@@ -46,7 +46,7 @@ class Route extends React.Component {
             children = children(props);
 
             if (children === undefined) {
-              if (__DEV__) {
+              // if (__DEV__) {
                 const { path } = this.props;
 
                 warning(
@@ -55,7 +55,7 @@ class Route extends React.Component {
                     `<Route${path ? ` path="${path}"` : ""}>, but you ` +
                     "should have returned a React element or `null`"
                 );
-              }
+              // }
 
               children = null;
             }
@@ -97,12 +97,12 @@ if (!React.createContext) {
     );
 
     let parentContext = this.context.router;
-    if (__DEV__) {
+    // if (__DEV__) {
       parentContext = parentContext._withoutWarnings;
-    }
+    // }
 
     const context = getContext(this.props, parentContext);
-    if (__DEV__) {
+    // if (__DEV__) {
       const contextWithoutWarnings = { ...context };
 
       Object.keys(context).forEach(key => {
@@ -116,7 +116,7 @@ if (!React.createContext) {
       });
 
       context._withoutWarnings = contextWithoutWarnings;
-    }
+    // }
 
     return {
       router: context
@@ -124,7 +124,7 @@ if (!React.createContext) {
   };
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   Route.propTypes = {
     children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
     component: PropTypes.func,
@@ -172,6 +172,6 @@ if (__DEV__) {
       '<Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.'
     );
   };
-}
+// }
 
 export default Route;

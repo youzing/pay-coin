@@ -27,11 +27,11 @@ function withRouter(Component) {
   C.displayName = `withRouter(${Component.displayName || Component.name})`;
   C.WrappedComponent = Component;
 
-  if (__DEV__) {
+  // if (__DEV__) {
     C.propTypes = {
       wrappedComponentRef: PropTypes.func
     };
-  }
+  // }
 
   return hoistStatics(C, Component);
 }

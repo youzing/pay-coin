@@ -16,7 +16,7 @@ class MemoryRouter extends React.Component {
   }
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   MemoryRouter.propTypes = {
     initialEntries: PropTypes.array,
     initialIndex: PropTypes.number,
@@ -32,6 +32,6 @@ if (__DEV__) {
         "use `import { Router }` instead of `import { MemoryRouter as Router }`."
     );
   };
-}
+// }
 
 export default MemoryRouter;

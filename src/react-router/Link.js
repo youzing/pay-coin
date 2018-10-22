@@ -1,5 +1,5 @@
 import React from "react";
-import { __RouterContext as RouterContext } from "react-router";
+import RouterContext  from "./RouterContext";
 import { createLocation } from "history";
 import PropTypes from "prop-types";
 import invariant from "invariant";
@@ -63,7 +63,7 @@ class Link extends React.Component {
   }
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   const toType = PropTypes.oneOfType([PropTypes.string, PropTypes.object]);
 
   Link.propTypes = {
@@ -73,6 +73,6 @@ if (__DEV__) {
     target: PropTypes.string,
     to: toType.isRequired
   };
-}
+// }
 
 export default Link;

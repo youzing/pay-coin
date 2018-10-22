@@ -81,7 +81,7 @@ if (!React.createContext) {
   Router.prototype.getChildContext = function() {
     const context = getContext(this.props, this.state);
 
-    if (__DEV__) {
+    // if (__DEV__) {
       const contextWithoutWarnings = { ...context };
 
       Object.keys(context).forEach(key => {
@@ -95,7 +95,7 @@ if (!React.createContext) {
       });
 
       context._withoutWarnings = contextWithoutWarnings;
-    }
+    // }
 
     return {
       router: context
@@ -103,7 +103,7 @@ if (!React.createContext) {
   };
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   Router.propTypes = {
     children: PropTypes.node,
     history: PropTypes.object.isRequired,
@@ -116,6 +116,6 @@ if (__DEV__) {
       "You cannot change <Router history>"
     );
   };
-}
+// }
 
 export default Router;

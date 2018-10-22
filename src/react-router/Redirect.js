@@ -62,12 +62,12 @@ Redirect.defaultProps = {
   push: false
 };
 
-if (__DEV__) {
+// if (__DEV__) {
   Redirect.propTypes = {
     push: PropTypes.bool,
     from: PropTypes.string,
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
   };
-}
+// }
 
 export default Redirect;

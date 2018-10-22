@@ -102,7 +102,7 @@ class StaticRouter extends React.Component {
   }
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   StaticRouter.propTypes = {
     basename: PropTypes.string,
     context: PropTypes.object,
@@ -116,6 +116,6 @@ if (__DEV__) {
         "use `import { Router }` instead of `import { StaticRouter as Router }`."
     );
   };
-}
+// }
 
 export default StaticRouter;

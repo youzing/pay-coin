@@ -1,7 +1,7 @@
 import warning from "warning";
 
 let warnAboutGettingProperty = () => {};
-if (__DEV__) {
+// if (__DEV__) {
   warnAboutGettingProperty = (object, key, message) => {
     let didIssueWarning = false;
 
@@ -19,6 +19,6 @@ if (__DEV__) {
       configurable: true
     });
   };
-}
+// }
 
 export default warnAboutGettingProperty;

@@ -44,13 +44,13 @@ Prompt.defaultProps = {
   when: true
 };
 
-if (__DEV__) {
+// if (__DEV__) {
   const messageType = PropTypes.oneOfType([PropTypes.func, PropTypes.string]);
 
   Prompt.propTypes = {
     when: PropTypes.bool,
     message: messageType.isRequired
   };
-}
+// }
 
 export default Prompt;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Router } from "react-router";
+import  Router  from "./Router";
 import { createBrowserHistory as createHistory } from "history";
 import PropTypes from "prop-types";
 import warning from "warning";
@@ -15,7 +15,7 @@ class BrowserRouter extends React.Component {
   }
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   BrowserRouter.propTypes = {
     basename: PropTypes.string,
     children: PropTypes.node,
@@ -31,6 +31,6 @@ if (__DEV__) {
         "use `import { Router }` instead of `import { BrowserRouter as Router }`."
     );
   };
-}
+// }
 
 export default BrowserRouter;

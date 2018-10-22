@@ -64,7 +64,7 @@ NavLink.defaultProps = {
   activeClassName: "active"
 };
 
-if (__DEV__) {
+// if (__DEV__) {
   const ariaCurrentType = PropTypes.oneOf([
     "page",
     "step",
@@ -86,6 +86,6 @@ if (__DEV__) {
     style: PropTypes.object,
     to: Link.propTypes.to
   };
-}
+// }
 
 export default NavLink;

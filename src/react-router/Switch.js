@@ -45,7 +45,7 @@ class Switch extends React.Component {
   }
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   Switch.propTypes = {
     children: PropTypes.node,
     location: PropTypes.object
@@ -62,6 +62,6 @@ if (__DEV__) {
       '<Switch> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.'
     );
   };
-}
+// }
 
 export default Switch;

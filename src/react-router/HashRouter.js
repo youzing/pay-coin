@@ -15,7 +15,7 @@ class HashRouter extends React.Component {
   }
 }
 
-if (__DEV__) {
+// if (__DEV__) {
   HashRouter.propTypes = {
     basename: PropTypes.string,
     children: PropTypes.node,
@@ -30,6 +30,6 @@ if (__DEV__) {
         "use `import { Router }` instead of `import { HashRouter as Router }`."
     );
   };
-}
+// }
 
 export default HashRouter;
